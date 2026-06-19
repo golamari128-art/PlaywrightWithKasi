@@ -9,12 +9,11 @@ async function run() {
        const browser = await puppeteer.launch({headers:false});
         const page= await browser.newPage();
         await page.goto("https://yahoo.com");
-       
         const title=await page.title();
         const metsDesc=await page.$eval('meta[name="desciption"]',(element) => element.textContent);
         const metaKeywords=await page.$eval('meta[name="keywords"]',(element)=> element.textContent);
 
-        //Extract Links
+        //Extract Links links
         
         const links=await page.$$eval("a",(elements)=>
             element.map((element) => ({
