@@ -11,11 +11,13 @@ async function run(){
          src:elements.src,
          alt:elements.alt,
         })
+        
         ));
 
     //Extract Links
 
     const Links=await page.$$eval("a",(elements)=>
+
     elements.map((elements)=>({
         href:elements.href,
         text: elements.textContent,
