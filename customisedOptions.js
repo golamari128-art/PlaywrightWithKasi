@@ -20,5 +20,4 @@ const puppeteer = require("puppeteer");
     catch(err){
         console.log(err);
     }
-    
 })();
