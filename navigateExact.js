@@ -16,7 +16,6 @@ async function run(){
 
     //Extract Links
     const Links=await page.$$eval("a",(elements)=>
-
     elements.map((elements)=>({
         href:elements.href,
         text: elements.textContent,
