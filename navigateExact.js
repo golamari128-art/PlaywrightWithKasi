@@ -11,7 +11,6 @@ async function run(){
          src:elements.src,
          alt:elements.alt,
         })
-
         ));
 
     //Extract Links
