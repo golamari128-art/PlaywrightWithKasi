@@ -7,6 +7,7 @@ async function run() {
   await page.goto("https://dev.vapusdata.com");
   const title =await page.title();
   console.log(title);
+  
   const heading = await page.$eval('p',(element)=> element.textContent);
   console.log(heading);
   await page.screenshot({path: 'header.png'});
